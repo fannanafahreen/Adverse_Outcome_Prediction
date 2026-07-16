@@ -51,3 +51,35 @@ A **self-constructed firm-year panel** built entirely from two free UK governmen
 ---
 
 ## Repository Structure
+├── 01_Data_Cleaning.ipynb          # EDA, missing value handling, leakage investigation
+├── 02_Feature_Engineering.ipynb    # Log transforms, encoding, final feature matrix
+├── 03_Modelling.ipynb.ipynb        # Naive baseline, logistic regression, XGBoost, backtesting
+├── data/
+│   ├── firm_year_panel_clean.csv   # Cleaned firm-year panel
+│   ├── X_logistic.csv              # Model-ready features (log-transformed) for logistic regression
+│   ├── X_xgboost.csv               # Model-ready features (raw) for XGBoost
+│   ├── y_and_ids.csv               # Labels and firm identifiers
+│   └── ...v2 files                 # Sensitivity analysis dataset (voluntary cancellations as y=0)
+└── README.md
+
+---
+
+## Key Findings
+
+- XGBoost outperforms logistic regression in AUC-PR in most backtesting rounds, with the advantage becoming **statistically significant** (via bootstrap CI) specifically in 2023 and 2024
+- This advantage is driven substantially more by **regulatory regime relevance** (~84%) than by training data volume (~16%), established via a controlled factorial experiment
+- XGBoost's performance **collapses without regular retraining** — a static model frozen on 2016–2019 data shows negligible improvement through 2024, while the same architecture retrained annually reaches its best performance in the same period
+- XGBoost's risk rankings are **less stable year-to-year** than logistic regression's, revealing an operational trade-off between predictive power and supervisory planning consistency
+- Both models' raw probability outputs are overconfident (a consequence of class-imbalance weighting), though XGBoost is meaningfully better calibrated than logistic regression
+
+---
+
+## Tools & Libraries
+
+Python 3.14 · pandas · scikit-learn · XGBoost · Optuna (Bayesian hyperparameter tuning) · SHAP · imbalanced-learn · matplotlib/seaborn
+
+---
+
+## Status
+
+This is an active MSc dissertation project. Data collection, EDA, feature engineering, and modelling (including extensive robustness testing) are complete. Dissertation write-up is in progress.
