@@ -51,16 +51,19 @@ A **self-constructed firm-year panel** built entirely from two free UK governmen
 ---
 
 ## Repository Structure
-├── 01_Data_Cleaning.ipynb          # EDA, missing value handling, leakage investigation
-├── 02_Feature_Engineering.ipynb    # Log transforms, encoding, final feature matrix
-├── 03_Modelling.ipynb.ipynb        # Naive baseline, logistic regression, XGBoost, backtesting
-├── data/
-│   ├── firm_year_panel_clean.csv   # Cleaned firm-year panel
-│   ├── X_logistic.csv              # Model-ready features (log-transformed) for logistic regression
-│   ├── X_xgboost.csv               # Model-ready features (raw) for XGBoost
-│   ├── y_and_ids.csv               # Labels and firm identifiers
-│   └── ...v2 files                 # Sensitivity analysis dataset (voluntary cancellations as y=0)
-└── README.md
+
+```
+01_Data_Cleaning.ipynb          - EDA, missing value handling, leakage investigation
+02_Feature_Engineering.ipynb    - Log transforms, encoding, final feature matrix
+03_Modelling.ipynb.ipynb        - Naive baseline, logistic regression, XGBoost, backtesting
+data/
+    firm_year_panel_clean.csv   - Cleaned firm-year panel
+    X_logistic.csv              - Model-ready features (log-transformed) for logistic regression
+    X_xgboost.csv                - Model-ready features (raw) for XGBoost
+    y_and_ids.csv                - Labels and firm identifiers
+    ...v2 files                  - Sensitivity analysis dataset (voluntary cancellations as y=0)
+README.md
+```
 
 ---
 
