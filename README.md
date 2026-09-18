@@ -9,9 +9,9 @@
 
 ## Project Overview
 
-This project develops a **SupTech (Supervisory Technology)** machine learning tool that predicts whether a UK FCA-regulated firm will experience an **adverse authorisation outcome** — revocation of authorisation or a formal disciplinary action — within a **24-month horizon**. The goal is to help the Financial Conduct Authority (FCA) allocate limited supervisory and inspection resources toward the firms most likely to require intervention.
+This project develops a **SupTech (Supervisory Technology)** machine learning tool that predicts whether a UK FCA-regulated firm will experience an **adverse authorisation outcome** revocation of authorisation or a formal disciplinary action within a **24-month horizon**. The goal is to help the Financial Conduct Authority (FCA) allocate limited supervisory and inspection resources toward the firms most likely to require intervention.
 
-This is explicitly framed as a **regulatory enforcement prediction problem**, distinct from traditional financial distress or bankruptcy prediction. A firm can be financially healthy and still face enforcement (e.g. large banks fined for conduct failures), while a financially struggling firm may never be formally disciplined. The literature has extensively studied bankruptcy prediction; regulatory enforcement prediction for non-bank financial firms remains comparatively underexplored.
+This is explicitly framed as a **regulatory enforcement prediction problem**, distinct from traditional financial distress or bankruptcy prediction. A firm can be financially healthy and still face enforcement (e.g. **Deutsche Bank** in 2017 banks fined for conduct failures), while a financially struggling firm may never be formally disciplined. The literature has extensively studied bankruptcy prediction; regulatory enforcement prediction for non-bank financial firms remains comparatively underexplored.
 
 ### Research Question
 
